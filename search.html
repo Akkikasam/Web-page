@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Search</title>
+  <link rel="stylesheet" href="search.css" />
+</head>
+<body>
+  <h1>Employee Search</h1>
+
+  <!-- Filter Section -->
+  <div class="filters">
+    <input type="text" id="filterEmployeeId" placeholder="Employee ID" />
+    <input type="text" id="filterFirstName" placeholder="First Name" />
+    <input type="text" id="filterLastName" placeholder="Last Name" />
+    <input type="text" id="filterLoginId" placeholder="Login ID" />
+    <input type="date" id="filterDOBFrom" placeholder="DOB From" />
+    <input type="date" id="filterDOBTo" placeholder="DOB To" />
+    <select id="filterDepartment">
+      <option value="">-- Select Department --</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Support">Support</option>
+      <option value="HR">HR</option>
+      <option value="Finance">Finance</option>
+    </select>
+    <button onclick="applyFilters()">Search</button>
+    <button onclick="deleteSelected()">Delete Selected</button>
+  </div>
+
+  <!-- Result Grid -->
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Employee ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Login ID</th>
+        <th>Date of Birth</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div id="pagination"></div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" style="display: none;">
+    <form id="editForm">
+      <h3>Edit Employee</h3>
+      <input type="hidden" id="editEmpId" />
+      <label>First Name:</label>
+      <input type="text" id="editFirstName" required /><br />
+      <label>Last Name:</label>
+      <input type="text" id="editLastName" required /><br />
+      <label>ID Proof (PDF Only):</label>
+      <input type="file" id="editIdProof" accept="application/pdf" /><br />
+      <button type="submit">Save</button>
+      <button type="button" onclick="closeEditModal()">Cancel</button>
+    </form>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>

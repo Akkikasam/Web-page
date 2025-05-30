@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+    <nav style="background:#333;padding:10px;color:white;margin-bottom:20px;">
+  <a href="employee.html" style="color:white;margin-right:15px;text-decoration:none;">Add Employee</a>
+  <a href="search.html" style="color:white;margin-right:15px;text-decoration:none;">Search Employees</a>
+  <a href="login.html" style="color:white;text-decoration:none;">Logout</a>
+</nav>
+
+  <div class="form-container">
+    <h2>Add Employee</h2>
+    <form id="employeeForm" enctype="multipart/form-data">
+      <!-- Auto-generated Employee ID -->
+      <label>Employee ID:</label>
+      <input type="text" id="employeeId" required>
+
+      <!-- Name fields -->
+      <label>First Name:</label>
+      <input type="text" id="firstName" required>
+
+      <label>Middle Name:</label>
+      <input type="text" id="middleName">
+
+      <label>Last Name:</label>
+      <input type="text" id="lastName" required>
+
+      <!-- Auto-generated Login ID -->
+      <label>Login ID:</label>
+      <input type="text" id="loginId" readonly>
+
+      <!-- Date of Birth -->
+      <label>Date of Birth:</label>
+      <input type="date" id="dob" required>
+
+      <!-- Department -->
+      <label>Department:</label>
+      <select id="department" required>
+        <option value="">Select</option>
+        <option>Engineering</option>
+        <option>Support</option>
+        <option>HR</option>
+        <option>Finance</option>
+      </select>
+
+      <!-- Salary -->
+      <label>Salary:</label>
+      <input type="number" id="salary" required>
+
+      <!-- Addresses -->
+      <label>Permanent Address:</label>
+      <textarea id="permanentAddress" required></textarea>
+
+      <label>Current Address:</label>
+      <textarea id="currentAddress" required></textarea>
+
+      <!-- ID Proof Upload -->
+      <label>ID Proof (PDF only, 10KB - 1MB):</label>
+      <input type="file" id="idProof" accept="application/pdf" required>
+
+      <button type="submit">Add Employee</button>
+      <p id="errorMsg" class="error"></p>
+    </form>
+  </div>
+
+  <script src="employee.js"></script>
+</body>
+</html>
+

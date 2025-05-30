@@ -1,0 +1,22 @@
+body {
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+}
+.login-container {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px gray;
+  width: 300px;
+}
+input, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+#errorMsg {
+  color: red;
+}
